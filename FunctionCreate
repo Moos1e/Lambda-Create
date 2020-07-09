@@ -1,0 +1,10 @@
+#!/bin/bash
+
+aws lambda create-function
+--function-name "<FileName>"
+--runtime "python27"
+--role "rn:aws:iam::<lambda role>"
+--handler "lambda_function.lambda_handler
+--timeout 15
+--memory-size 256
+--zip-file "fileb://<fileName>.zip"
